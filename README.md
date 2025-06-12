@@ -3,6 +3,10 @@
 
 >This library is at the very beginning of its development, so it may not be fully functional yet. However, it is already usable and can be used in production.
 
+
+You can find an example of the gallery in action on the [demo page](https://gallery.nakyss.fr/).
+
+
 ## Get Started
 
 #### 1. Include the `gallery.js` and `gallery.css` script in your HTML file:
