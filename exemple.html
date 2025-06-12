@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Gallery.js</title>
     <script src="gallery2.js"></script>
     <link rel="stylesheet" href="gallery.css">
-    <style>
-        .gallery {
-            width: 500px;
-            cursor: pointer;
-        }
-    </style>
     <script>
         let test;
         document.addEventListener('DOMContentLoaded', function() {
@@ -24,10 +18,47 @@
     </script>
 </head>
 <body>
-    <img class="gallery" src="https://www.empara.fr/blog/wp-content/uploads/2015/06/11_Photo-de-paysage-quel-type-de-lumi--re-favoriser-Lumi--re-de-c--t--.jpg" alt="" title="Première image">
-    <img class="gallery" src="https://www.empara.fr/blog/wp-content/uploads/2016/04/Soleil-en-%C3%A9toile-4.jpg" alt="" title="La deuxieme">
-    <img class="gallery" src="https://static.vecteezy.com/ti/photos-gratuite/p2/14322695-beau-paysage-nuageux-sur-la-mer-coucher-de-soleil-sur-la-plage-tropicale-ciel-au-crepuscule-et-reflexion-sur-la-mer-pour-voyager-en-vacances-se-detendre-gratuit-photo.JPG" alt="" >
+    <h1>Gallery.<span style="color: #f4ed06;">js</span></h1>
 
-    <button class="open-gallery" data-index="2">Ouvrir gallery 3 </button>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ullam error aperiam, quisquam pariatur atque iusto eveniet veniam ex nihil qui iure alias rem quos, excepturi optio nam a autem?</p>
+
+    <div class="continer">
+        <div class="carrousel">
+            <img class="gallery" src="images/image1.jpg" title="">
+            <img class="gallery" src="images/image2.jpg" title="">
+            <img class="gallery" src="images/image3.jpg" title="">
+            <img class="gallery" src="images/image4.jpg" title="">
+            <img class="gallery" src="images/image5.jpg" title="">
+            <img class="gallery" src="images/image6.jpg" title="">
+            <img class="gallery" src="images/image7.jpg" title="">
+        </div>
+    </div>
+    
+
+    <button class="open-gallery" data-index="2">Ouvrir Photo 3 </button>
 </body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    h1{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        text-align: center;
+        font-size: 75px;
+        color: #333;
+    }
+    .carrousel{
+        margin: 100px 0;
+        display: flex;
+        height: 40vh;
+        gap: 5px;
+        transform: translate(-250px);
+    }
+    .carrousel img{
+        cursor: pointer;
+    }
+    .continer{
+        overflow: hidden;
+    }
+</style>
 </html>
