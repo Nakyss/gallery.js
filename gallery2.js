@@ -4,6 +4,7 @@ class Gallery {
         images = document.querySelectorAll('.gallery'),
         buttons = document.querySelectorAll('.open-gallery'),
         borderColor = "white",
+        miniaBorderColor = "grey",
         textColor = "black"
     } = {}) 
     {
@@ -16,8 +17,10 @@ class Gallery {
         this.indexDisplayed = 0;
         this.rightButton = null;
         this.leftButton = null;
+
         this.borderColor = borderColor;
         this.textColor = textColor;
+        this.miniaBorderColor = miniaBorderColor;
 
         this.listImages.forEach((image, index) => {
             image.addEventListener('click', () => {
@@ -81,7 +84,7 @@ class Gallery {
         this.gallery.addEventListener('click', this.closeGallery);
 
         // Ajout de l'écouteur de clavier pour les touches Echap, Droite et Gauche
-        const keydownListener = (event) => {
+        this.keydownListener = (event) => {
             let index;
             if (event.key === 'Escape') {
                 this.closeGallery();
@@ -93,7 +96,7 @@ class Gallery {
                 this.openGallery(index);
             }
         };
-        document.addEventListener('keydown', keydownListener);
+        document.addEventListener('keydown', this.keydownListener);
 
 
         document.querySelector('body').appendChild(this.gallery);
@@ -203,11 +206,13 @@ class Gallery {
     personnalize = () => {
         this.gallery.style.setProperty('--border-color', this.borderColor);
         this.title.style.setProperty('--text-color', this.textColor);
+        this.gallery.style.setProperty('--minia-color', this.miniaBorderColor);
     }
 
-    changeColors = ({ borderColor = this.borderColor,textColor = this.textColor } = {}) => {
+    changeColors = ({ borderColor = this.borderColor,textColor = this.textColor, miniaBorderColor = this.miniaBorderColor } = {}) => {
         this.borderColor = borderColor;
         this.textColor = textColor;
+        this.miniaBorderColor = miniaBorderColor;
         if (this.gallery) {
             this.personnalize();
         }
