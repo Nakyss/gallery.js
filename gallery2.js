@@ -42,7 +42,7 @@ class Gallery {
         });
     }
 
-    static create(options) {
+    static init(options) {
         return new Gallery(options); 
     }
     
