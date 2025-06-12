@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <script src="gallery.js"></script>
+    <script src="gallery2.js"></script>
     <link rel="stylesheet" href="gallery.css">
     <style>
         .gallery {
@@ -12,6 +12,16 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        let test;
+        document.addEventListener('DOMContentLoaded', function() {
+            test = Gallery.create({
+                borderColor: "black",
+                textColor: "white",
+            });
+        });
+        
+    </script>
 </head>
 <body>
     <img class="gallery" src="https://www.empara.fr/blog/wp-content/uploads/2015/06/11_Photo-de-paysage-quel-type-de-lumi--re-favoriser-Lumi--re-de-c--t--.jpg" alt="" title="Première image">

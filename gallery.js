@@ -6,6 +6,7 @@ const createGallery = images => {
     // Creation de la div d'arrière plan, qui contient la galerie
     gallery = document.createElement('div');
     gallery.classList.add('gallery-overlay');
+    gallery.classList.add('transition-fade');
 
 
     //Div qui regroupe l'image principale et les boutons
@@ -108,12 +109,20 @@ const createGallery = images => {
 
     const body = document.querySelector('body');
     body.appendChild(gallery);
+
+    setTimeout(() => {
+        gallery.classList.remove('transition-fade');
+    }, 1); 
 }
 
 const closeGallery = () => {
     if (gallery) {
-        gallery.style.display = 'none';
+        
+        gallery.classList.add('transition-fade');
         document.removeEventListener('keydown', keydownListener); // Supprime l'écouteur
+        setTimeout(() => {
+            gallery.style.display = 'none';
+        }, 200); 
     }
 }
 
@@ -137,16 +146,17 @@ const openGallery = (images, index) => {
 
     gallery.style.display = 'flex';
     document.addEventListener('keydown', keydownListener); // Réattache l'écouteur si nécessaire
+
+    setTimeout(() => {
+        gallery.classList.remove('transition-fade');
+    }, 1); 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     images = document.querySelectorAll('.gallery')
-    let imgIndex = 0;
 
-    console.log(images);
-    images.forEach(image => {
-        image.setAttribute('data-index', imgIndex); // Adding a index to each image
-        imgIndex++;
+    images.forEach((image, index) => {
+        image.setAttribute('data-index', index); // Adding a index to each image
         image.addEventListener('click', () => {
             openGallery(images, parseInt(image.getAttribute('data-index'))); 
         });

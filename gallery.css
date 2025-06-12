@@ -8,7 +8,13 @@
     z-index: 1000;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.2s ease-in-out;
 }
+
+.transition-fade {
+    opacity: 0;
+}
+
 
 @media (max-width: 600px) {
     .gallery-overlay {
@@ -19,7 +25,7 @@
 
 .gallery-container{
     padding: 15px;
-    background: white;
+    background: var(--border-color);
     align-self: center;
 }
 
@@ -33,6 +39,7 @@
     margin-top: 15px;
     margin-bottom: 0;
     margin-left: 10px;
+    color: var(--text-color)
 }
 
 .gallery-minia{
@@ -54,7 +61,7 @@
 }
 
 .gallery-minia-image.active{
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     filter: none;
 }
 
