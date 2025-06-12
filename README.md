@@ -8,13 +8,13 @@
 #### 1. Include the `gallery.js` and `gallery.css` script in your HTML file:
 
 ```html
-<script src="gallery.js"></script>
-<link rel="stylesheet" href="gallery.css">
+<script src="lib/gallery.js"></script>
+<link rel="stylesheet" href="lib/gallery.css">
 ```
 Or if you don't want to download the files :
 ```html
-<script src="https://gallery.nakyss.fr/gallery.js"></script>
-<link rel="stylesheet" href="https://gallery.nakyss.fr/gallery.js">
+<script src="https://gallery.nakyss.fr/lib/gallery.css"></script>
+<link rel="stylesheet" href="https://gallery.nakyss.fr/lib/gallery.js">
 ```
 
 #### 2. Add your images to the gallery:
