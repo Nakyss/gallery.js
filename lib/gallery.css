@@ -89,6 +89,7 @@
     cursor: pointer;
     fill: white;
     height: 50vh;
+    top:25vh;
     position: absolute;
     padding: 0 70px;
 }
