@@ -16,6 +16,8 @@ You can find an example of the gallery in action on the [demo page](https://gall
 <link rel="stylesheet" href="lib/gallery.css">
 ```
 Or if you don't want to download the files :
+> [!TIP]
+> I recommend using this method only for testing, as the files may not be available, buggy or not the latest version.
 ```html
 <script src="https://gallery.nakyss.fr/lib/gallery.css"></script>
 <link rel="stylesheet" href="https://gallery.nakyss.fr/lib/gallery.js">
