@@ -87,21 +87,24 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 50px;
-    color: white;
+    fill: white;
     height: 50vh;
     position: absolute;
     padding: 0 70px;
 }
 
+.gallery-button svg {
+    width: 30px;
+}
+
 @media (max-width: 600px) {
-    .gallery-button span {
+    .gallery-button svg {
         display: none;
     }
 }
 
 .gallery-button:hover{
-    color: #b3b3b3;   
+    fill: #b3b3b3;   
 }
 
 .gallery-button:focus{
