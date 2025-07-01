@@ -55,6 +55,13 @@
     margin-left: 10px;
     color: var(--text-color)
 }
+.gallery-title-outer{
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: var(--text-color)
+}
 
 .gallery-minia{
     display: flex;
@@ -117,4 +124,8 @@
 
 .gallery-button.right{
     right: 0;
+}
+
+.no-title{
+    display: none;
 }
