@@ -1,3 +1,7 @@
+.gallery-open {
+    overflow: hidden !important;
+}
+
 .gallery-overlay{
     position: fixed;
     top: 0;
