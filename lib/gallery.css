@@ -8,7 +8,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--background-color);
     z-index: 1000000;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,6 @@
 .transition-fade {
     opacity: 0;
 }
-
 
 @media (max-width: 600px) {
     .gallery-overlay {
@@ -99,8 +98,8 @@
     border: none;
     cursor: pointer;
     fill: white;
-    height: 50vh;
-    top:25vh;
+    height: 40vh;
+    top: 30vh;
     position: absolute;
     padding: 0 70px;
 }
@@ -114,7 +113,7 @@
         display: none;
     }
 }
-
+.gallery-close:hover,
 .gallery-button:hover{
     fill: #b3b3b3;   
 }
@@ -128,6 +127,19 @@
 
 .gallery-button.right{
     right: 0;
+}
+
+.gallery-close{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    fill: white;
+}
+.gallery-close svg {
+    width: 20px;
 }
 
 .no-title{
