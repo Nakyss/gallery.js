@@ -13,14 +13,14 @@ You can find an example of the gallery in action on the [demo page](https://gall
 
 ```html
 <script src="lib/gallery-min.js"></script>
-<link rel="stylesheet" href="lib/gallery.css">
+<link rel="stylesheet" href="lib/gallery-min.css">
 ```
 Or if you don't want to download the files :
 > [!TIP]
 > I recommend using this method only for testing, as the files may not be available, buggy or not the latest version.
 ```html
 <script src="https://gallery.nakyss.fr/lib/gallery-min.js"></script>
-<link rel="stylesheet" href="https://gallery.nakyss.fr/lib/gallery.css">
+<link rel="stylesheet" href="https://gallery.nakyss.fr/lib/gallery-min.css">
 ```
 You can either use the minified version (`gallery-min.js`) for production or the unminified version (`gallery.js`) for development.
 
@@ -70,8 +70,23 @@ Gallery.init({
     // The color used for the miniatures border when the image is selected
     miniaBorderColor: '#8c8c8c',
     
-    // TThe color used for the text of the title
-    textColor: 'white'
+    // The color used for the text of the title
+    textColor: 'white',
+
+    // Color of background/overlay
+    backgroundColor = "rgba(0, 0, 0, 0.8)",
+
+    // Title placement {inner | outer | none}
+    title = "inner",
+
+    // Display buttons
+    isButtonsDisplayed = true,
+
+    // Enable scrolling, true: scroll in images, false: scroll normally in the page
+    isScrollActivated = true,
+
+    // Function to display a custom title, takes as parameters the image index and the list of images
+    titleFunction = null
 });
 ```
 
