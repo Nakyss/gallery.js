@@ -82,6 +82,7 @@
     filter: brightness(0.5);
     object-fit: cover;
     border: 1px solid gray;
+    image-rendering: auto;
 }
 
 .gallery-minia-image.active{
