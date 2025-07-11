@@ -46,7 +46,7 @@
 }
 
 .gallery-image{
-    max-width: 80vw;
+    width: 100%;
     max-height: 70vh;
     align-self: center;
 }
