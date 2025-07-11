@@ -51,19 +51,25 @@
             <input type="color" id="border" name="border" value="#00000" autocomplete="off"/>
             <label for="border">Border color of main image</label>
 
-            <p class="code">myGallery.changeColors({borderColor: 'black'});</p>
+            <p class="code">myGallery.changeColors({border: 'black'});</p>
         </div>
         <div class="color-picker">
             <input type="color" id="text" name="text" value="#ffffff" autocomplete="off"/>
             <label for="text">Text Color</label>
 
-            <p class="code">myGallery.changeColors({textColor: 'white'});</p>
+            <p class="code">myGallery.changeColors({text: 'white'});</p>
         </div>
         <div class="color-picker">
             <input type="color" id="minia" name="minia" value="#808080" autocomplete="off"/>
             <label for="minia">Border color of miniature</label>
 
-            <p class="code">myGallery.changeColors({miniaBorderColor: '#808080'});</p>
+            <p class="code">myGallery.changeColors({miniaBorder: '#808080'});</p>
+        </div>
+        <div class="color-picker">
+            <input type="color" id="background" name="background" value="rgba(0, 0, 0, 0.8)" autocomplete="off"/>
+            <label for="minia">Background color of overlay</label>
+
+            <p class="code">myGallery.changeColors({background: 'rgba(0, 0, 0, 0.8)'});</p>
         </div>
     </div>
 </body>
@@ -72,23 +78,31 @@
     const borderColorInput = document.getElementById('border');
     const textColorInput = document.getElementById('text');
     const miniaColorInput = document.getElementById('minia');
+    const backgroundInput = document.getElementById('background');
+
     borderColorInput.addEventListener('input', () => {
         myGallery.changeColors({
-            borderColor: borderColorInput.value,
+            border: borderColorInput.value,
         });
-        borderColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({borderColor: '${borderColorInput.value}'});`;
+        borderColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({border: '${borderColorInput.value}'});`;
     });
     textColorInput.addEventListener('input', () => {
         myGallery.changeColors({
-            textColor: textColorInput.value,
+            text: textColorInput.value,
         });
-        textColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({textColor: '${textColorInput.value}'});`;
+        textColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({text: '${textColorInput.value}'});`;
     });
     miniaColorInput.addEventListener('input', () => {
         myGallery.changeColors({
-            miniaBorderColor: miniaColorInput.value,
+            miniaBorder: miniaColorInput.value,
         });
-        miniaColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({miniaBorderColor: '${miniaColorInput.value}'});`;
+        miniaColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({miniaBorder: '${miniaColorInput.value}'});`;
+    });
+    backgroundInput.addEventListener('input', () => {
+        myGallery.changeColors({
+            background: backgroundInput.value,
+        });
+        backgroundInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({background: '${backgroundInput.value}'});`;
     });
 
 </script>
