@@ -74,19 +74,19 @@ Gallery.init({
     textColor: 'white',
 
     // Color of background/overlay
-    backgroundColor = "rgba(0, 0, 0, 0.8)",
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
 
     // Title placement {inner | outer | none}
-    title = "inner",
+    title: "inner",
 
     // Display buttons
-    isButtonsDisplayed = true,
+    isButtonsDisplayed: true,
 
     // Enable scrolling, true: scroll in images, false: scroll normally in the page
-    isScrollActivated = true,
+    isScrollActivated: true,
 
     // Function to display a custom title, takes as parameters the image index and the list of images
-    titleFunction = null
+    titleFunction: null
 });
 ```
 
