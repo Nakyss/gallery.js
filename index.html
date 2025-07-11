@@ -71,6 +71,7 @@
 
             <p class="code">myGallery.changeColors({background: 'rgba(0, 0, 0, 0.8)'});</p>
         </div>
+        <button id="resetButton">Reset</button>
     </div>
 </body>
 
@@ -79,6 +80,7 @@
     const textColorInput = document.getElementById('text');
     const miniaColorInput = document.getElementById('minia');
     const backgroundInput = document.getElementById('background');
+    const resetButton = document.getElementById('resetButton');
 
     borderColorInput.addEventListener('input', () => {
         myGallery.changeColors({
@@ -104,6 +106,26 @@
         });
         backgroundInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({background: '${backgroundInput.value}'});`;
     });
+
+    resetButton.addEventListener('click', () => {
+        myGallery.changeColors({
+            border: "white",
+            miniaBorder: "grey",
+            text: "black",
+            background:"rgba(0, 0, 0, 0.8)",
+        });
+        borderColorInput.value = "#00000";
+        borderColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({border: '${borderColorInput.value}'});`;
+
+        textColorInput.value = "#ffffff"
+        textColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({text: '${textColorInput.value}'});`;
+
+        miniaColorInput.value = "#808080"
+        miniaColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({miniaBorder: '${miniaColorInput.value}'});`;
+
+        backgroundInput.value = "rgba(0, 0, 0, 0.8)"
+        backgroundInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({background: '${backgroundInput.value}'});`;
+    })
 
 </script>
 <style>
