@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery.js</title>
     <script src="lib/gallery-min.js"></script>
-    <link rel="stylesheet" href="lib/gallery.css">
+    <link rel="stylesheet" href="lib/gallery-min.css">
     <script>
         let myGallery;
         document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +16,83 @@
         });
         
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        body{
+            font-family: "Inter", sans-serif;
+            margin: 0;
+        }
+        h1{
+            font-optical-sizing: auto;
+            text-align: center;
+            font-size: 6vh;
+            color: #333;
+        }
+        #description{
+            text-align: center;
+        }
+        .carrousel{
+            margin: 10vh 0 5vh 0;
+            display: flex;
+            height: 40vh;
+            gap: 5px;
+            transform: translate(-10vw);
+        }
+        .carrousel img{
+            cursor: pointer;
+        }
+        .continer{
+            overflow: hidden;
+        }
+        .github{
+            position: absolute;
+            left: 2vw;
+        }
+        .github img{
+            width: 3vw;
+        }
+        .open-buttons{
+            display: flex;
+            justify-content: center;
+        }
+        #resetButton,
+        .open-gallery{
+            background-color: #f4ed06;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .open-gallery:hover{
+            background-color: #e3d505;
+        }
+        .custom{
+            margin: 0 0 10vh 7vw;   
+        }
+        .color-picker{
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .color-picker input[type="color"]{
+            width: 50px;
+            height: 30px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .code{
+            margin: 0 0 0 20px;
+            padding:10px;
+            border: 1px solid gray;
+            background: lightgrey;
+            border-radius: 5px;
+            font-size: 80%;
+        }
+    </style>
 </head>
 <body>
     <a href="https://github.com/Nakyss/gallery.js" class="github">
@@ -88,18 +165,21 @@
         });
         borderColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({border: '${borderColorInput.value}'});`;
     });
+
     textColorInput.addEventListener('input', () => {
         myGallery.changeColors({
             text: textColorInput.value,
         });
         textColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({text: '${textColorInput.value}'});`;
     });
+
     miniaColorInput.addEventListener('input', () => {
         myGallery.changeColors({
             miniaBorder: miniaColorInput.value,
         });
         miniaColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({miniaBorder: '${miniaColorInput.value}'});`;
     });
+
     backgroundInput.addEventListener('input', () => {
         myGallery.changeColors({
             background: backgroundInput.value,
@@ -125,84 +205,7 @@
 
         backgroundInput.value = "rgba(0, 0, 0, 0.8)"
         backgroundInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({background: 'rgba(0, 0, 0, 0.8)'});`;
-    })
+    });
 
 </script>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-    body{
-        font-family: "Inter", sans-serif;
-        margin: 0;
-    }
-    h1{
-        font-optical-sizing: auto;
-        text-align: center;
-        font-size: 6vh;
-        color: #333;
-    }
-    #description{
-        text-align: center;
-    }
-    .carrousel{
-        margin: 10vh 0 5vh 0;
-        display: flex;
-        height: 40vh;
-        gap: 5px;
-        transform: translate(-10vw);
-    }
-    .carrousel img{
-        cursor: pointer;
-    }
-    .continer{
-        overflow: hidden;
-    }
-    .github{
-        position: absolute;
-        left: 2vw;
-    }
-    .github img{
-        width: 3vw;
-    }
-    .open-buttons{
-        display: flex;
-        justify-content: center;
-    }
-    #resetButton,
-    .open-gallery{
-        background-color: #f4ed06;
-        color: black;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        border-radius: 5px;
-        font-weight: 500;
-    }
-    .open-gallery:hover{
-        background-color: #e3d505;
-    }
-    .custom{
-        margin: 0 0 10vh 7vw;   
-    }
-    .color-picker{
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-    }
-    .color-picker input[type="color"]{
-        width: 50px;
-        height: 30px;
-        border: none;
-        margin-right: 10px;
-        cursor: pointer;
-    }
-    .code{
-        margin: 0 0 0 20px;
-        padding:10px;
-        border: 1px solid gray;
-        background: lightgrey;
-        border-radius: 5px;
-        font-size: 80%;
-    }
-</style>
 </html>
