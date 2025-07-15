@@ -99,6 +99,7 @@ You can also use the `Gallery` object to access the current gallery and its meth
 Gallery.changeColors({
     borderColor: 'red',
     miniaBorderColor: 'blue',
-    textColor: 'yellow'
+    textColor: 'yellow',
+    backgroundColor: "rgba(255, 0, 0, 0.4)"
 });
 ```
