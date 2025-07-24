@@ -88,9 +88,27 @@
             margin: 0 0 0 20px;
             padding:10px;
             border: 1px solid gray;
-            background: lightgrey;
+            background: #1f1f1f;
             border-radius: 5px;
             font-size: 80%;
+            color: #d4d4d4;
+        }
+        
+        y {
+            color: #ffd701;
+        }
+        m {
+            color: #ce916e;
+        }
+        lb {
+            color: #9cdcfe;
+        }
+        b {
+            color: #179fff;
+            font-weight: normal;
+        }
+        ly {
+            color: #dcdcaa;
         }
     </style>
 </head>
@@ -128,25 +146,33 @@
             <input type="color" id="border" name="border" value="#00000" autocomplete="off"/>
             <label for="border">Border color of main image</label>
 
-            <p class="code">myGallery.changeColors({border: 'black'});</p>
+            <p class="code">
+                <lb>myGallery</lb>.<ly>changeColors</ly><b>(</b><y>{</y><lb>border:</lb> <m>'black'</m><y>)</y><b>}</b>;
+            </p>
         </div>
         <div class="color-picker">
             <input type="color" id="text" name="text" value="#ffffff" autocomplete="off"/>
             <label for="text">Text Color</label>
 
-            <p class="code">myGallery.changeColors({text: 'white'});</p>
+            <p class="code">
+                <lb>myGallery</lb>.<ly>changeColors</ly><b>(</b><y>{</y><lb>text:</lb> <m>'white'</m><y>)</y><b>}</b>;
+            </p>
         </div>
         <div class="color-picker">
             <input type="color" id="minia" name="minia" value="#808080" autocomplete="off"/>
             <label for="minia">Border color of miniature</label>
 
-            <p class="code">myGallery.changeColors({miniaBorder: '#808080'});</p>
+            <p class="code">
+                <lb>myGallery</lb>.<ly>changeColors</ly><b>(</b><y>{</y><lb>miniaBorder:</lb> <m>'#808080'</m><y>)</y><b>}</b>;
+            </p>
         </div>
         <div class="color-picker">
             <input type="color" id="background" name="background" value="rgba(0, 0, 0, 0.8)" autocomplete="off"/>
             <label for="minia">Background color of overlay</label>
 
-            <p class="code">myGallery.changeColors({background: 'rgba(0, 0, 0, 0.8)'});</p>
+            <p class="code">
+                <lb>myGallery</lb>.<ly>changeColors</ly><b>(</b><y>{</y><lb>background:</lb> <m>'rgba(0, 0, 0, 0.8)'</m><y>)</y><b>}</b>;
+            </p>
         </div>
         <button id="resetButton">Reset</button>
     </div>
@@ -163,28 +189,28 @@
         myGallery.changeColors({
             border: borderColorInput.value,
         });
-        borderColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({border: '${borderColorInput.value}'});`;
+        borderColorInput.parentElement.querySelector('.code m').textContent = `'${borderColorInput.value}'`;
     });
 
     textColorInput.addEventListener('input', () => {
         myGallery.changeColors({
             text: textColorInput.value,
         });
-        textColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({text: '${textColorInput.value}'});`;
+        textColorInput.parentElement.querySelector('.code m').textContent = `'${textColorInput.value}'`;
     });
 
     miniaColorInput.addEventListener('input', () => {
         myGallery.changeColors({
             miniaBorder: miniaColorInput.value,
         });
-        miniaColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({miniaBorder: '${miniaColorInput.value}'});`;
+        miniaColorInput.parentElement.querySelector('.code m').textContent = `'${miniaColorInput.value}'`;
     });
 
     backgroundInput.addEventListener('input', () => {
         myGallery.changeColors({
             background: backgroundInput.value,
         });
-        backgroundInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({background: '${backgroundInput.value}'});`;
+        backgroundInput.parentElement.querySelector('.code m').textContent = `'${backgroundInput.value}'`;
     });
 
     resetButton.addEventListener('click', () => {
@@ -195,16 +221,16 @@
             background:"rgba(0, 0, 0, 0.8)",
         });
         borderColorInput.value = "#00000";
-        borderColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({border: 'black'});`;
+        borderColorInput.parentElement.querySelector('.code m').textContent = `'black'`;
 
         textColorInput.value = "#ffffff"
-        textColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({text: 'white'});`;
+        textColorInput.parentElement.querySelector('.code m').textContent = `'white'`;
 
         miniaColorInput.value = "#808080"
-        miniaColorInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({miniaBorder: '#808080'});`;
+        miniaColorInput.parentElement.querySelector('.code m').textContent = `'#808080'`;
 
         backgroundInput.value = "rgba(0, 0, 0, 0.8)"
-        backgroundInput.parentElement.querySelector('.code').textContent = `myGallery.changeColors({background: 'rgba(0, 0, 0, 0.8)'});`;
+        backgroundInput.parentElement.querySelector('.code m').textContent = `'rgba(0, 0, 0, 0.8)'`;
     });
 
 </script>
