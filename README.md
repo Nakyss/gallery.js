@@ -93,10 +93,12 @@ Gallery.init({
 ## Extra Information
 
 You can totally have multiple galleries on the same page, just make sure to use different classes for each gallery and initialize them separately.
-You can also use the `Gallery` object to access the current gallery and its methods. For example, you can use `Gallery.changeColors()` to change the colors of the gallery.
+You can also use the `Gallery` object to access the current gallery and its methods. For example, you can use `g.changeColors()` to change is colors.
 
 ```javascript
-Gallery.changeColors({
+const g = Gallery.init();
+
+g.changeColors({
     borderColor: 'red',
     miniaBorderColor: 'blue',
     textColor: 'yellow',
